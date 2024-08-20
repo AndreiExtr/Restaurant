@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = defineConfig({
   transpileDependencies: true,
   publicPath: process.env.NODE_ENV === 'production' 
-  ? '/restaurant/' 
+  ? '/Restaurant/' 
   : '/',
   css: {
     extract: {
