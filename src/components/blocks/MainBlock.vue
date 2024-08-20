@@ -1,6 +1,6 @@
 <template>
   <div class="content_main">
-    <div class="content_main_cards1">
+    <div class="content_main_cards">
       <CardProduct
         v-for="product in products"
         :key="product.id"
@@ -56,7 +56,6 @@ export default {
 <style lang="scss" scoped>
 .content_main{
   margin-top: 134px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,16 +63,7 @@ export default {
   gap: 35px;
   padding: 40px 200px;
 
-  &_cards1{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px
-  }
-
-  &_cards2{
+  &_cards{
     display: flex;
     flex-direction: row;
     align-items: center;
