@@ -13,11 +13,11 @@ module.exports = defineConfig({
     }
   },
   configureWebpack: {
-    plugins: [
-      new MiniCssExtractPlugin({
-        filename: 'style.css',
-        chunkFilename: 'style.css'
-      })
-    ]
+    // plugins: [
+    //   new MiniCssExtractPlugin({
+    //     filename: 'style.css',
+    //     chunkFilename: 'style.css'
+    //   })
+    // ]
   }
 })
