@@ -39,7 +39,6 @@ export default {
     const savedState = JSON.parse(localStorage.getItem('vuex-state'))
     if (savedState) {
       this.$store.replaceState(savedState)
-      console.log(this.products)  // Проверьте, содержатся ли здесь все 8 продуктов
     }
   },
   methods: {
