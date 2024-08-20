@@ -39,6 +39,7 @@ export default {
     const savedState = JSON.parse(localStorage.getItem('vuex-state'))
     if (savedState) {
       this.$store.replaceState(savedState)
+      console.log(this.products)  // Проверьте, содержатся ли здесь все 8 продуктов
     }
   },
   methods: {
@@ -56,6 +57,7 @@ export default {
 <style lang="scss" scoped>
 .content_main{
   margin-top: 134px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
