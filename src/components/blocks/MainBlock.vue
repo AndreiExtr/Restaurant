@@ -36,20 +36,10 @@ export default {
     }
   },
   created () {
-    // Попытка загрузки сохраненного состояния из localStorage
-    const savedState = localStorage.getItem('vuex-state')
+    const savedState = JSON.parse(localStorage.getItem('vuex-state'))
     if (savedState) {
-      try {
-        const parsedState = JSON.parse(savedState)
-        this.$store.replaceState(Object.assign({}, this.$store.state, parsedState))
-        console.log('Vuex state restored:', parsedState)
-      } catch (error) {
-        console.error('Failed to parse Vuex state from localStorage:', error)
-      }
+      this.$store.replaceState(savedState)
     }
-
-    // Проверка количества продуктов после восстановления состояния
-    console.log('Products after state restoration:', this.products)
   },
   methods: {
     goToProductPage (product) {
@@ -59,12 +49,6 @@ export default {
         state: { title: product.title, price: product.price, img: product.img }
       })
     }
-  },
-  beforeUnmount () {
-    // Сохранение актуального состояния Vuex в localStorage перед выгрузкой страницы
-    const stateToSave = this.$store.state
-    localStorage.setItem('vuex-state', JSON.stringify(stateToSave))
-    console.log('Vuex state saved:', stateToSave)
   }
 }
 </script>
