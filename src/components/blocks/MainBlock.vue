@@ -68,7 +68,8 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   @media (max-width: 1700px) {
